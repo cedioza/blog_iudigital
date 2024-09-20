@@ -129,7 +129,7 @@
           <code>git push</code>. Esto actualizará el repositorio remoto con tu commit reciente.
         </p>
         <p>Ejecuta el siguiente comando en la terminal:</p>
-        <pre><code>git push origin <nombre-de-la-rama></code></pre>
+        <pre><code>git push origin &lt;nombre-de-la-rama&gt;</code></pre>
         <p>
           Asegúrate de reemplazar <code>&lt;nombre-de-la-rama&gt;</code> con el nombre de la rama en la que estás trabajando, como <code>main</code> o <code>master</code>.
         </p>
@@ -138,6 +138,186 @@
           alt="Enviar cambios con git push"
           class="responsive-img"
         />
+
+        <h3>Si obtienes un error de rama sin upstream</h3>
+        <p>
+          Si ves un mensaje de error que dice que la rama actual no tiene una rama upstream, debes establecerlo usando el siguiente comando:
+        </p>
+        <pre><code>git push --set-upstream origin &lt;nombre-de-la-rama&gt;</code></pre>
+        <p>
+          Esto empujará tu rama al repositorio remoto y la configurará para rastrear la rama remota, lo que te permitirá usar <code>git push</code> en el futuro sin especificar la rama.
+        </p>
+
+        <img
+        src="/assets/github_8.png"
+        alt="Enviar cambios con git push"
+        class="responsive-img"
+      />
+
+      <img
+      src="/assets/github_9.png"
+      alt="Enviar cambios con git push"
+      class="responsive-img"
+    />
+        
+       
+    <h2>Realizar un Merge de Cambios</h2>
+<p>
+  Para fusionar cambios de otra rama en tu rama actual, utiliza el comando
+  <code>git merge</code>. Esto combina los cambios de la rama especificada 
+  en tu rama activa, permitiendo integrar nuevas características o correcciones 
+  de manera efectiva.
+</p>
+<p>Ejecuta el siguiente comando en la terminal:</p>
+<pre><code>git merge &lt;nombre-de-la-rama&gt;</code></pre>
+<p>
+  Reemplaza <code>&lt;nombre-de-la-rama&gt;</code> con el nombre de la rama que 
+  deseas fusionar, como <code>blog_git</code>.
+</p>
+<img
+  src="/assets/github_10.png"
+  alt="Realizar un merge con git merge"
+  class="responsive-img"
+/>
+
+
+
+<img
+  src="/assets/github_11.png"
+  alt="Realizar un merge con git merge"
+  class="responsive-img"
+/>
+
+
+<h2>Visualizar Cambios Antes de Aceptar un Merge en GitHub</h2>
+<p>
+  Antes de fusionar una rama en GitHub, es importante revisar los cambios propuestos. 
+  Esto te permite asegurarte de que todo esté en orden y de que no se introduzcan errores 
+  en tu proyecto.
+</p>
+<p>
+  Para hacerlo, navega a la pestaña <strong>Pull Requests</strong> en tu repositorio en GitHub. 
+  Allí verás una lista de solicitudes de extracción (pull requests) pendientes. 
+  Haz clic en la solicitud de extracción que deseas revisar.
+</p>
+<p>
+  En la página de la solicitud de extracción, podrás ver todos los archivos que han sido 
+  modificados, así como una comparación de los cambios entre las ramas. GitHub mostrará 
+  un resumen de los cambios en la sección <strong>Files changed</strong>.
+</p>
+<p>
+  Si encuentras algo que no te gusta, puedes dejar comentarios o pedir que se realicen 
+  ajustes antes de proceder. Si todo está bien, puedes aceptar el merge haciendo clic en 
+  el botón <strong>Merge pull request</strong>.
+</p>
+<img
+  src="/assets/github_12.png"
+  alt="Visualizar cambios en GitHub antes de hacer merge"
+  class="responsive-img"
+/>
+
+<h2>Abrir un Pull Request</h2>
+<p>
+    Para abrir un pull request (PR) en GitHub, primero asegúrate de haber realizado 
+    cambios en tu rama local y haberlos subido al repositorio remoto. 
+</p>
+<p>
+    Navega a la pestaña <strong>Pull Requests</strong> en tu repositorio y haz clic en 
+    el botón <strong>New Pull Request</strong>.
+</p>
+<p>
+    Selecciona la rama de origen y la rama de destino. Luego, añade un título y una 
+    descripción para tu pull request. Por ejemplo:
+</p>
+
+<img
+  src="/assets/github_13.png"
+  alt="Visualizar cambios en GitHub antes de hacer merge"
+  class="responsive-img"
+/>
+
+<p>
+    Haz clic en <strong>Create Pull Request</strong> para abrir el PR.
+</p>
+
+<h2>Crear un Merge</h2>
+<p>
+    Una vez que tu pull request ha sido revisado y aprobado, puedes proceder a crear 
+    el merge. En la página de tu pull request, haz clic en el botón <strong>Merge Pull Request</strong>.
+</p>
+<p>
+    Se abrirá una ventana de confirmación. Puedes añadir un mensaje adicional si lo deseas. 
+    Luego, haz clic en <strong>Confirm Merge</strong> para fusionar los cambios.
+</p>
+<p>
+    Después de completar el merge, asegúrate de eliminar la rama de origen si ya no la necesitas.
+</p>
+
+<img
+  src="/assets/github_14.png"
+  alt="Visualizar cambios en GitHub antes de hacer merge"
+  class="responsive-img"
+/>
+
+
+
+<h2>Eliminar Rama Después de un Merge</h2>
+<p>
+    Después de hacer un merge exitoso de tu pull request, GitHub te mostrará una 
+    notificación indicando que el merge se ha completado. A menudo, verás un 
+    botón que dice <strong>Delete branch</strong> justo debajo del mensaje de 
+    confirmación del merge.
+</p>
+<p>
+    Hacer clic en este botón eliminará la rama de origen (por ejemplo, 
+    <code>blog_git</code>) del repositorio remoto. Esto es útil para mantener 
+    tu lista de ramas limpia y organizada, especialmente si ya no necesitas la 
+    rama fusionada.
+</p>
+
+
+<img
+  src="/assets/github_15.png"
+  alt="Visualizar cambios en GitHub antes de hacer merge"
+  class="responsive-img"
+/>
+
+
+<h2>Ver Cambios en la Rama Principal</h2>
+<p>
+    Al finalizar el proceso de merge, tu rama principal (por ejemplo, <code>main</code> o <code>master</code>) 
+    incluirá todos los cambios que has fusionado desde la rama de origen. Esto significa que 
+    ahora puedes disfrutar de las nuevas características o correcciones que has implementado.
+</p>
+<p>
+    Para ver los cambios en la rama principal, asegúrate de estar en la rama correcta. Puedes 
+    cambiar a la rama principal con el siguiente comando:
+</p>
+<pre><code>git checkout main</code></pre>
+<p>
+    Luego, actualiza tu rama local con:
+</p>
+<pre><code>git pull origin main</code></pre>
+<p>
+    Ahora, puedes revisar el estado de tu proyecto y asegurarte de que todo funcione como 
+    se espera. Si todo está en orden, ¡puedes continuar con tu desarrollo o implementar 
+    nuevas características!
+</p>
+
+
+
+<img
+  src="/assets/github_16.png"
+  alt="Visualizar cambios en GitHub antes de hacer merge"
+  class="responsive-img"
+/>
+
+
+<img
+  src="/assets/github_17.png"
+  alt="Visualizar cambios en GitHub antes de hacer merge"
+  class="responsive-img"
+/>
 
         <h2>Conclusión</h2>
         <p>
