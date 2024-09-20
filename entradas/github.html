@@ -71,40 +71,38 @@
           alt="Creación de una rama con Git"
           class="responsive-img"
         />
-
-        <h3>Agregar y Confirmar Cambios</h3>
+        <h2>Verificar el Estado de los Archivos</h2>
         <p>
-          Después de realizar cambios en tu proyecto dentro de una rama,
-          necesitas guardar esos cambios en el historial de Git. Esto se hace en
-          dos pasos: <code>git add .</code> y <code>git commit</code>, antes puedes validar que archivos son los que tienen cambios con <code>git status</code> .
+          Antes de añadir cambios, usa el comando <code>git status</code> para
+          ver qué archivos han sido modificados, añadidos o eliminados. En este
+          ejemplo, podemos ver archivos no rastreados y archivos modificados en
+          el proyecto.
         </p>
 
         <img
-        src="/assets/github_1.png"
-        alt="Creación de una rama con Git"
-        class="responsive-img"
-      />
-
-        <h4>1. Agregar Cambios al Área de Staging</h4>
-        <p>
-          El comando <code>git add .</code> añade todos los cambios realizados
-          en el directorio actual al área de staging. El área de staging es
-          donde Git prepara los cambios que se incluirán en el próximo commit.
-        </p>
-        <p>Ejecuta el siguiente comando en la terminal:</p>
-        <pre><code>git add .</code></pre>
-        <p>
-          Este comando añade todos los archivos modificados, nuevos o eliminados
-          al área de staging.
-        </p>
-        <!-- Imagen para ilustrar el comando "git add ." -->
-        <img
-          src="/assets/git-add.png"
-          alt="Agregar cambios al área de staging con git add ."
+          src="/assets/github_4.png"
+          alt="Verificando el estado con git status"
           class="responsive-img"
         />
 
-        <h4>2. Confirmar los Cambios con un Commit</h4>
+        <h2>Agregar y Confirmar Cambios en Git</h2>
+        <p>
+          Una vez que has realizado cambios en tu proyecto, el siguiente paso es
+          agregarlos al área de staging y luego confirmarlos en el historial de
+          Git. Para hacer esto, primero utiliza el comando
+          <code>git add .</code>, que añade todos los archivos modificados,
+          nuevos o eliminados al área de staging, la cual organiza los archivos
+          que serán incluidos en el próximo commit. Luego, ejecuta
+          <code>git status"</code> para confirmar los
+          cambios para crear un Commit.
+        </p>
+
+        <img
+          src="/assets/github_5.png"
+          alt="Confirmar cambios con git commit"
+          class="responsive-img"
+        />
+        <h2>Confirmar los Cambios con un Commit</h2>
         <p>
           Una vez que los cambios están en el área de staging, el siguiente paso
           es confirmar esos cambios en el historial de Git usando el comando
@@ -120,31 +118,24 @@
         </p>
         <!-- Imagen para ilustrar el comando "git commit" -->
         <img
-          src="/assets/git-commit.png"
+          src="/assets/github_6.png"
           alt="Confirmar cambios con git commit"
           class="responsive-img"
         />
 
-        <h2>Agregar un Repositorio Remoto</h2>
+        <h2>Enviar los Cambios al Repositorio Remoto</h2>
         <p>
-          Conectar tu repositorio local a uno remoto en GitHub te permite
-          guardar tu código en un servidor externo y colaborar con otros. Para
-          hacerlo, sigue estos pasos:
+          Para enviar los cambios que has confirmado a tu repositorio remoto (como GitHub, GitLab, etc.), usa el comando
+          <code>git push</code>. Esto actualizará el repositorio remoto con tu commit reciente.
         </p>
-        <ol>
-          <li>Crea un nuevo repositorio en GitHub.</li>
-          <li>
-            En tu terminal, enlaza tu repositorio local con el remoto usando el
-            siguiente comando:
-          </li>
-          <pre><code>git remote add origin https://github.com/TuUsuario/NombreDelRepo.git</code></pre>
-          <li>Finalmente, sube los cambios al repositorio remoto con:</li>
-          <pre><code>git push -u origin main</code></pre>
-        </ol>
-        <!-- Imagen para ilustrar la conexión de un repositorio remoto -->
+        <p>Ejecuta el siguiente comando en la terminal:</p>
+        <pre><code>git push origin <nombre-de-la-rama></code></pre>
+        <p>
+          Asegúrate de reemplazar <code>&lt;nombre-de-la-rama&gt;</code> con el nombre de la rama en la que estás trabajando, como <code>main</code> o <code>master</code>.
+        </p>
         <img
-          src="/assets/git-remote.png"
-          alt="Agregar un repositorio remoto en GitHub"
+          src="/assets/github_7.png"
+          alt="Enviar cambios con git push"
           class="responsive-img"
         />
 
