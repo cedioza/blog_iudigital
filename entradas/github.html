@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git - Paso a Paso</title>
+    <link rel="stylesheet" href="/css/entradas.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Guía de Git: Inicia, Ramas y Repositorios Remotos</h1>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <article class="entry">
+        <!-- <img src="/assets/git-tutorial.png" alt="Logo de Git" class="responsive-img"> -->
+
+        <h2>Inicialización del Repositorio Localmente</h2>
+        <p>
+          Para comenzar a usar Git, lo primero que debes hacer es crear un
+          repositorio local en tu máquina. Este repositorio será donde Git
+          rastree los cambios en tu proyecto.
+        </p>
+        <p>Abre la terminal en la carpeta de tu proyecto y escribe:</p>
+        <pre><code>git init</code></pre>
+        <p>
+          Este comando crea una carpeta oculta llamada <code>.git</code> donde
+          Git guardará todos los cambios de tu proyecto. En caso de ya tener un
+          repositorio inicializado aparecera el siguiente mensaje
+        </p>
+        <!-- Imagen para ilustrar el comando "git init" -->
+        <img
+          src="/assets/github_0.png"
+          alt="Inicialización de un repositorio con git init"
+          class="responsive-img"
+        />
+
+        <h2>Creación de Branches (Ramas)</h2>
+        <p>
+          Las ramas (branches) en Git te permiten trabajar en diferentes
+          versiones del proyecto sin afectar la rama principal (<code
+            >main</code
+          >
+          o <code>master</code>). Para crear una nueva rama, usa el siguiente
+          comando:
+        </p>
+        <pre><code>git checkout -b nombre-de-la-rama</code></pre>
+
+        <!-- Imagen para ilustrar la creación de una rama con git checkout -->
+        <img
+          src="/assets/github_1.png"
+          alt="Creación de una rama con Git"
+          class="responsive-img"
+        />
+
+        <p>
+          Una vez creada la rama, puedes hacer cambios en tu proyecto y luego
+          fusionarla con la rama principal utilizando:
+        </p>
+        <pre><code> git checkout main</code></pre>
+        <pre><code> git merge nombre-de-la-rama    </code></pre>
+        <!-- Imagen para ilustrar la creación de una rama con git checkout -->
+        <img
+          src="/assets/github_1.png"
+          alt="Creación de una rama con Git"
+          class="responsive-img"
+        />
+        <h2>Verificar el Estado de los Archivos</h2>
+        <p>
+          Antes de añadir cambios, usa el comando <code>git status</code> para
+          ver qué archivos han sido modificados, añadidos o eliminados. En este
+          ejemplo, podemos ver archivos no rastreados y archivos modificados en
+          el proyecto.
+        </p>
+
+        <img
+          src="/assets/github_4.png"
+          alt="Verificando el estado con git status"
+          class="responsive-img"
+        />
+
+        <h2>Agregar y Confirmar Cambios en Git</h2>
+        <p>
+          Una vez que has realizado cambios en tu proyecto, el siguiente paso es
+          agregarlos al área de staging y luego confirmarlos en el historial de
+          Git. Para hacer esto, primero utiliza el comando
+          <code>git add .</code>, que añade todos los archivos modificados,
+          nuevos o eliminados al área de staging, la cual organiza los archivos
+          que serán incluidos en el próximo commit. Luego, ejecuta
+          <code>git status"</code> para confirmar los
+          cambios para crear un Commit.
+        </p>
+
+        <img
+          src="/assets/github_5.png"
+          alt="Confirmar cambios con git commit"
+          class="responsive-img"
+        />
+        <h2>Confirmar los Cambios con un Commit</h2>
+        <p>
+          Una vez que los cambios están en el área de staging, el siguiente paso
+          es confirmar esos cambios en el historial de Git usando el comando
+          <code>git commit</code>. Un commit guarda un punto en el historial de
+          tu proyecto con un mensaje descriptivo de los cambios realizados.
+        </p>
+        <p>Ejecuta el siguiente comando en la terminal:</p>
+        <pre><code>git commit -m "Descripción de los cambios realizados"</code></pre>
+        <p>
+          Reemplaza <code>"Descripción de los cambios realizados"</code> con un
+          mensaje que describa claramente qué cambios has hecho. Esto es útil
+          para mantener un historial claro y comprensible de tu proyecto.
+        </p>
+        <!-- Imagen para ilustrar el comando "git commit" -->
+        <img
+          src="/assets/github_6.png"
+          alt="Confirmar cambios con git commit"
+          class="responsive-img"
+        />
+
+        <h2>Enviar los Cambios al Repositorio Remoto</h2>
+        <p>
+          Para enviar los cambios que has confirmado a tu repositorio remoto (como GitHub, GitLab, etc.), usa el comando
+          <code>git push</code>. Esto actualizará el repositorio remoto con tu commit reciente.
+        </p>
+        <p>Ejecuta el siguiente comando en la terminal:</p>
+        <pre><code>git push origin <nombre-de-la-rama></code></pre>
+        <p>
+          Asegúrate de reemplazar <code>&lt;nombre-de-la-rama&gt;</code> con el nombre de la rama en la que estás trabajando, como <code>main</code> o <code>master</code>.
+        </p>
+        <img
+          src="/assets/github_7.png"
+          alt="Enviar cambios con git push"
+          class="responsive-img"
+        />
+
+        <h2>Conclusión</h2>
+        <p>
+          Git es una herramienta poderosa para el control de versiones. Al
+          seguir estos pasos, ya estarás listo para gestionar tus proyectos de
+          manera eficiente y colaborar con otros desarrolladores.
+        </p>
+      </article>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Blog de Tecnología. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
